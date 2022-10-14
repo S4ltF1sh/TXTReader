@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TXTReader" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.TXTReader" parent="Base.Theme.TXTReader">
+        <!-- Transparent system bars for edge-to-edge. -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+    </style>
+
+    <style name="MyFAB" parent="ShapeAppearanceOverlay.Material3.FloatingActionButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/blue_grey_900_dark</item>
+        <item name="iconGravity">end</item>
+        <item name="iconTint">@color/teal_a400</item>
+        <item name="shapeAppearanceOverlay">
+            @style/ShapeAppearanceOverlay.Material3.FloatingActionButton
+        </item>
+        <item name="android:layout_marginBottom">@dimen/margin_medium</item>
+    </style>
+</resources>

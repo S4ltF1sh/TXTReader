@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/file_name"
+    android:paddingHorizontal="16dp"
+    app:counterEnabled="true"
+    app:counterMaxLength="100"
+    app:helperText=" Filename can't contain\n special character.">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edtFileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="TextContrastCheck" />
+
+</com.google.android.material.textfield.TextInputLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TXT Reader</string>
+    <string name="edt_empty_document">Tài liệu trống</string>
+    <string name="fab_more_action">FloatingButtonMoreAction</string>
+    <string name="edit">EDIT FILE</string>
+    <string name="save">SAVE FILE</string>
+    <string name="open">OPEN FILE</string>
+    <string name="read">READ FILE</string>
+    <string name="file_name">file\'s name</string>
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/appCompatEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="clip_horizontal"
+            android:hint="@string/edt_empty_document"
+            android:padding="12dp"
+            android:scrollbars="vertical"
+            android:textColor="@color/custom_edittext_text_color"
+            tools:ignore="TextContrastCheck" />
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/myLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/floatingActionButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp">
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/extendedFloatingActionOpenButton"
+            style="@style/MyFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open"
+            app:icon="@drawable/ic_open_txt_file"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/extendedFloatingActionSaveButton"
+            style="@style/MyFAB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            app:icon="@drawable/ic_save"
+            app:layout_constraintBottom_toTopOf="@id/extendedFloatingActionOpenButton"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/extendedFloatingActionReadButton"
+            style="@style/MyFAB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/read"
+            app:icon="@drawable/ic_read"
+            app:layout_constraintBottom_toTopOf="@id/extendedFloatingActionSaveButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="DuplicateClickableBoundsCheck" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/extendedFloatingActionEditButton"
+            style="@style/MyFAB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/edit"
+            app:icon="@drawable/ic_edit"
+            app:layout_constraintBottom_toTopOf="@id/extendedFloatingActionSaveButton"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:contentDescription="@string/fab_more_action"
+        app:backgroundTint="@color/blue_grey_900_dark"
+        app:fabSize="auto"
+        app:srcCompat="@drawable/ic_add"
+        app:tint="@color/teal_a400" />
+
+</RelativeLayout>
